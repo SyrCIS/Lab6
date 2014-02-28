@@ -54,29 +54,25 @@ inserts' :: String -> [(String, String)] -> [String]
   -- Same as above but using explicit recursion
   
 --DEFINITION  
-inserts' [] [] = []
-inserts' str [(x:xs), (y:ys)]
-    | (length y) == (length x) = [x ++ str ++ y] : inserts' str [(xs,ys)]
-    | otherwise = inserts' str [(x, ys)]
+inserts' _ [] = []
+inserts' str ((x, y):rest)
+    | (length y) == (length x) = (x ++ (str ++ y)) : inserts' str rest
+    | otherwise = inserts' str rest
     
 --TEST
 ans4 = inserts' "at" [("sc","tr"),("",""),("c",""),("l","t")]
 
---Problems
-  --It cannot match types and will not compile
   
---5----------------------------------------------
---CONTRACT
+-- 5----------------------------------------------
+-- CONTRACT
 multPairSum :: [(Float, Float)] -> Float
 
---PURPOSE
+-- PURPOSE
   -- To sum up the numbers and then multiply them together
   
---DEFINITION
-multPairSum (x:xs:rest) = [[x+xs] * rest | (x,xs) <- (x:xs:rest)] ++ multPairSum rest
+-- DEFINITION
+multPairSum [] = 1
+multPairSum ((x,y):rest) = (x+y)*(multPairSum rest )
 
---TEST
+-- TEST
 ans5 = multPairSum [(3,4),(10,12),(100,2)]
-
---PROBLEMS
-  --Again getting a type matching error

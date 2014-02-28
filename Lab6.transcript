@@ -1,0 +1,20 @@
+[1 of 1] Compiling Lab6             ( lab6.hs, interpreted )
+Ok, modules loaded: Lab6.
+*Lab6> ans5
+15708.0
+*Lab6> ans1
+[("one",3),("two",3),("three",5)]
+*Lab6> nas2
+
+<interactive>:12:1:
+    Not in scope: `nas2'
+    Perhaps you meant `ans2' (line 34)
+*Lab6> ans2
+[("one",3),("two",3),("three",5)]
+*Lab6> ans3
+["scattr","at","latt"]
+*Lab6> ans4
+["scattr","at","latt"]
+*Lab6> ans5
+15708.0
+*Lab6>
