@@ -4,11 +4,6 @@ Ok, modules loaded: Lab6.
 15708.0
 *Lab6> ans1
 [("one",3),("two",3),("three",5)]
-*Lab6> nas2
-
-<interactive>:12:1:
-    Not in scope: `nas2'
-    Perhaps you meant `ans2' (line 34)
 *Lab6> ans2
 [("one",3),("two",3),("three",5)]
 *Lab6> ans3
