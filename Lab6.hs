@@ -17,7 +17,7 @@ getLengths xs = [(x, (length x)) | x <- xs]
 
 
 --TEST
-ans1 = getLength [(one),(two),(three)]
+ans1 = getLengths ["one","two","three"]
 
 --2----------------------------------------------------
 --Contract
@@ -31,7 +31,7 @@ getLengths' [] =[]
 getLengths' (x:xs) = (x, (length x)) : getLengths' xs
 
 --TEST
-ans2 = getLengths' [(one),(two),(three)]
+ans2 = getLengths' ["one","two","three"]
 
 --3-----------------------------------------------------
 --CONTRACT
